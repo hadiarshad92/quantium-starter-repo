@@ -1,5 +1,7 @@
 import pandas as pd
 import glob
+from dash import Dash, html, dcc
+import plotly.express as px
 
 #load all csv files from the data directory
 all_files = glob.glob("data/*.csv")
@@ -32,7 +34,6 @@ final_df = grouped[['sales', 'date', 'region']]
 
 #save to a new csv file
 final_df.to_csv('formatted_sales.csv', index=False)
-
 
 
 
